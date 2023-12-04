@@ -162,7 +162,7 @@ class Decoder(nn.Module):
         steps = range(embedded_inputs.size(0))
         idxs = None
         mask = Variable(
-            embedded_inputs.data.new().byte().new(embedded_inputs.size(1), embedded_inputs.size(0)).zero_(),
+            embedded_inputs.data.new().bool().new(embedded_inputs.size(1), embedded_inputs.size(0)).zero_(),
             requires_grad=False
         )
 
